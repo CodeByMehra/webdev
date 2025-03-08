@@ -1,6 +1,35 @@
 body{
+    margin:0;
+    padding: 0;;
     background-color: rgb(247, 227, 201);
 }
+
+header{
+    text-shadow: 1px 5px 10px;
+}
+
+.navbar{
+    padding: 10px;
+    background-color: rgb(255, 174, 68);
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.navbar a{
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.navbar a:hover{
+    background-color: rgb(255, 124, 1);
+    text-decoration: none;
+    color: white;
+}
+
 .container{
     max-width: 200px;
     text-align: center;
@@ -11,7 +40,6 @@ body{
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     display: inline-block;
 }
-
 
 .speciality{
     text-align: inherit ;
