@@ -1,0 +1,81 @@
+body{
+    margin:0;
+    padding: 0;;
+    background-color: rgb(247, 227, 201);
+}
+
+header{
+    text-shadow: 1px 5px 10px;
+}
+
+.navbar{
+    padding: 10px;
+    background-color: rgb(255, 174, 68);
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.navbar a{
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.navbar a:hover{
+    background-color: rgb(255, 124, 1);
+    text-decoration: none;
+    color: white;
+}
+
+.container{
+    max-width: 200px;
+    text-align: center;
+    padding: 40px;
+    margin: 15px ;
+    border-radius: 2vw;
+    background-color: rgb(246, 247, 246);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    display: inline-block;
+}
+
+.speciality{
+    text-align: inherit ;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+img{
+    border-radius: inherit;
+    max-height: 300px;
+}
+
+.name{
+    font-family: garamond;
+}
+
+.button{
+    display: inline;
+    background-color: rgb(255, 166, 0);
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    margin: 2px;
+    border-radius: 10px;   
+}
+
+.button:hover{
+    background-color: rgb(255, 187, 60);
+}
+
+nav{
+    list-style: none;
+    margin-left: 10px;
+}
+
+footer{
+    margin: 15px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(255, 145, 1);
+}
