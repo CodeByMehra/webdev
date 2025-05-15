@@ -1,0 +1,143 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+.navbar{
+    display: flex;
+    background-color: black;
+    padding: 20px;
+    margin: 0px;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+
+.darkMode{
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    max-width: 50px;
+    margin: 10px;
+    margin-top: 10px;
+    background-color: black;
+}
+
+.company{
+    color: white;
+    font-size: 20px;
+}
+
+body{
+    background-color: #eef0f1;
+}
+
+.navbar a{
+    display: inline;
+    text-decoration: none;
+    color: aliceblue;
+    padding: 10px;
+}
+
+ .navbar a:hover{
+    background-color: rgb(48, 48, 48);
+ }
+
+.hero{
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.getstarted{
+    text-decoration: none;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    background-color: black;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.getstarted:hover{
+    background-color: rgb(48, 48, 48);
+}
+
+.features{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 40px;
+    text-transform: uppercase;
+}
+
+.feature {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.about{
+    display: flex;
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    padding: 60px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial img{
+  width: 150px;         
+  height: 150px;
+  object-fit: cover;   
+  border-radius: 50%;
+  border: 3px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.testimonials{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.testimonial:hover{
+    transform: scale(1.1);
+}
+
+.testimonial p{
+    width: 150px;
+    margin: 10px auto;
+    font-style: italic;
+    font-weight: bold;
+    color: #333;
+}
+
+.testimonial{
+    text-align: center;
+}
+
+.footer{
+    background-color: black;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.contact{
+    padding: 20px;
+}
+
+#social{
+    color: white;
+}
