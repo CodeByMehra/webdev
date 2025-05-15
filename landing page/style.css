@@ -17,6 +17,7 @@ html{
 }
 
 .darkMode{
+    padding: 6px; 
     color: white;
     border-radius: 5px;
     text-decoration: none;
@@ -24,6 +25,12 @@ html{
     margin: 10px;
     margin-top: 10px;
     background-color: black;
+    text-align: center;
+}
+
+.darkMode a{
+    text-decoration: none;
+    color: white;
 }
 
 .company{
