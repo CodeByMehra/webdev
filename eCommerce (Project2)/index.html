@@ -19,20 +19,12 @@
             <h1>dior</h1>
             <p>here is the description of the perfume</p>
             <button>Buy Now</button>
-            <button onclick=" addToCart()">Buy Now >Add To cart</button>
+            <button onclick=" addToCart()">Add To cart</button>
         </div>
     </div>
 
     <h1 id="cartItems"></h1>
 
-    <script>
-        let itemCount = 0;
-
-        function addToCart(){
-            itemCount = itemCount+1 
-            document.getElementById("cartItems").innerText= `Your cart has ${itemCount} items`;
-        }
-        
-    </script>
+<script src="script.js"></script>
 </body>
 </html>
