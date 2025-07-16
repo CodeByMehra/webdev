@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="title">Fragrance Era</div>
+        <div class="navButtons">
+            
+        </div>
+    </div>
+    <div class="container">
+        <div class="box">
+            <img src="images/sample.jpg" alt="Perfume image">
+            <h1>dior</h1>
+            <p>here is the description of the perfume</p>
+            <a href="" onclick=" addToCart()">Buy Now</a>
+            <a href="">Add To Cart</a>
+        </div>
+    </div>
+
+    <h1 id="cartItems"></h1>
+
+    <script>
+        let itemCount = 0;
+        document.getElementById("cartItems").innerText= `Your cart has ${itemCount} items`;
+
+        function addToCart(){
+            itemCount = itemCount+1 
+            document.getElementById("cartItems").innerText= `Your cart has ${itemCount} items`;
+        }
+        
+    </script>
+</body>
+</html>
