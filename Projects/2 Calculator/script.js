@@ -1,16 +1,3 @@
-// let display= ``;
-
-// function buttonPress(num){
-//     display =document.getElementsByClassName("display")[0].innerText = display +  `${num}` ;
-// }
-
-// function solution(display){
-//     let answer= eval(display);
-    
-//     document.getElementsByClassName("display")[0].innerText = `${answer}` ;
-//     display= answer;
-// }
-
 let displayText = ""; 
 
 function buttonPress(num) {
