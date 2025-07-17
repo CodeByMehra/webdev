@@ -31,5 +31,5 @@ function solution() {
 
 function clearDisplay(){
     displayText= "";
-    document.getElementsByClassName("display")[0].innerText = "";
+    document.getElementsByClassName("display")[0].innerText ="";
 }
