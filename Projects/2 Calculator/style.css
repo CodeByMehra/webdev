@@ -1,29 +1,66 @@
-.calculator{
+/* === Reset some default margin/padding === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* === Center the calculator on the page === */
+  body {
+    height: 100vh;
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    background-color: rgb(148, 212, 241);
+    align-items: center;
+    background-color: #e3f2fd;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* === Calculator container === */
+  .calculator {
+    background-color: #90caf9;
     width: 350px;
-    height: 500px;
-    border-radius: 10px;
-}
-
-.display{
-    background-color: rgb(255, 255, 255);
-    margin-left: 20px;
-    padding: 10px;
-    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* === Display screen === */
+  .display {
+    width: 100%;
     height: 60px;
+    background-color: white;
     border-radius: 10px;
     text-align: right;
-}
-
-.buttons{
-    margin: 10px;
+    padding: 15px;
+    font-size: 24px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  
+  /* === Button grid === */
+  .buttons {
     display: grid;
-    margin-top: 100px;
-    gap: 10px;
     grid-template-columns: repeat(4, 1fr);
-
-}
-
+    gap: 10px;
+    width: 100%;
+  }
+  
+  /* === Buttons === */
+  .buttons button {
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .buttons button:hover {
+    background-color: #cfd8dc;
+  }
+  
