@@ -28,3 +28,7 @@ function solution() {
         displayText = "";
     }
 }
+
+function clear(){
+    displayText= ` `;
+}
