@@ -29,6 +29,7 @@ function solution() {
     }
 }
 
-function clear(){
-    displayText= ` `;
+function clearDisplay(){
+    displayText= "";
+    document.getElementsByClassName("display")[0].innerText = "";
 }
