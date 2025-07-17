@@ -33,3 +33,8 @@ function clearDisplay(){
     displayText= "";
     document.getElementsByClassName("display")[0].innerText ="";
 }
+
+function clearLast(){
+    displayText = displayText.slice(0, -1);
+    document.getElementsByClassName("display")[0].innerText = `${displayText}`;
+}
