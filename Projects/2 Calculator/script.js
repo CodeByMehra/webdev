@@ -23,5 +23,5 @@ function clearDisplay(){
 
 function clearLast(){
     displayText = displayText.slice(0, -1);
-    document.getElementsByClassName("display")[0].innerText = `${display}`;
+    document.getElementsByClassName("display")[0].innerText = `${displayText}`;
 }
