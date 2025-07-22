@@ -1,5 +1,5 @@
-let userinput;
+let userinput= "";
 function getInput(userinput){
-    let userchoice = userinput;
+    document.getElementById("choiceDisplay").innerText= `You Choosen ${userinput} `;
 }
 
