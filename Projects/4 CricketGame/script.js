@@ -1,8 +1,7 @@
 let userinput= "";
-let randomNumber= math.random()*3;
-
 
 function getInput(userinput){
+    let randomNumber= Math.random()*3;
     let computerChoice = ""
 if (randomNumber>0 && randomNumber<1){
     computerChoice = 'Bat';
