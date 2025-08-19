@@ -75,9 +75,11 @@ function scoreBoard(userinput, computerChoice) {
         if (userScores === 5) {
             document.getElementById("resultSection").innerText = `Result : You Won!! `;
             document.getElementById("tryAgainButton").style.display="inline"
+            document.getElementsByClassName("gamePanel")[0].style.display="none"
         } else if (pcScores === 5) {
             document.getElementById("resultSection").innerText = `Result : PC WON!! `;
             document.getElementById("tryAgainButton").style.display="inline"
+            document.getElementsByClassName("gamePanel")[0].style.display="none"
         }
     }
 }
@@ -87,4 +89,5 @@ function gameReset(){
     pcScores= 0;
     document.getElementById("pcScoreCount").innerText = pcScores;
     document.getElementById("userScoreCount").innerText = userScores;
+    document.getElementsByClassName("gamePanel")[0].style.display="inline"
 }
