@@ -74,8 +74,17 @@ function scoreBoard(userinput, computerChoice) {
         // Check for win after updating scores
         if (userScores === 5) {
             document.getElementById("resultSection").innerText = `Result : You Won!! `;
+            document.getElementById("tryAgainButton").style.display="inline"
         } else if (pcScores === 5) {
             document.getElementById("resultSection").innerText = `Result : PC WON!! `;
+            document.getElementById("tryAgainButton").style.display="inline"
         }
     }
+}
+
+function gameReset(){
+    userScores= 0;
+    pcScores= 0;
+    document.getElementById("pcScoreCount").innerText = pcScores;
+    document.getElementById("userScoreCount").innerText = userScores;
 }
