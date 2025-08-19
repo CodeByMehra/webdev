@@ -73,11 +73,9 @@ function scoreBoard(userinput, computerChoice) {
         }
         // Check for win after updating scores
         if (userScores === 5) {
-            document.getElementById("resultSection").innerText = `Result : You Won!! 
-           `;
+            document.getElementById("resultSection").innerText = `Result : You Won!! `;
         } else if (pcScores === 5) {
-            document.getElementById("resultSection").innerText = `Result : PC WON!! 
-            `;
+            document.getElementById("resultSection").innerText = `Result : PC WON!! `;
         }
     }
 }
