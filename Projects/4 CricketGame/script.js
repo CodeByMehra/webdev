@@ -50,24 +50,24 @@ function scoreBoard(userinput, computerChoice) {
             document.getElementById("resultDisplay").innerText = `Result : Tie`;
         } else if (userinput == 'Bat' && computerChoice == 'Ball') {
             userScores++;
-            document.getElementById("userScoreCount").innerText = userScores;
+            document.getElementById("userScoreCount").innerText = `Your score : ${userScores}`;
         } else if (userinput == 'Bat' && computerChoice == 'Stump') {
             pcScores++;
-            document.getElementById("pcScoreCount").innerText = pcScores;
+            document.getElementById("pcScoreCount").innerText = `PC score : ${pcScores}`;
         } else if (userinput == 'Ball' && computerChoice == 'Bat') {
             pcScores++;
-            document.getElementById("pcScoreCount").innerText = pcScores;
+            document.getElementById("pcScoreCount").innerText = `PC score : ${pcScores}`;
         } else if (userinput == 'Ball' && computerChoice == 'Ball') {
             document.getElementById("resultDisplay").innerText = `Result : Tie`;
         } else if (userinput == 'Ball' && computerChoice == 'Stump') {
             userScores++;
-            document.getElementById("userScoreCount").innerText = userScores;
+            document.getElementById("userScoreCount").innerText = `Your score : ${userScores}`;
         } else if (userinput == 'Stump' && computerChoice == 'Bat') {
             userScores++;
-            document.getElementById("userScoreCount").innerText = userScores;
+            document.getElementById("userScoreCount").innerText = `Your score : ${userScores}`;
         } else if (userinput == 'Stump' && computerChoice == 'Ball') {
             pcScores++;
-            document.getElementById("pcScoreCount").innerText = pcScores;
+            document.getElementById("pcScoreCount").innerText = `PC score : ${pcScores}`;
         } else if (userinput == 'Stump' && computerChoice == 'Stump') {
             document.getElementById("resultDisplay").innerText = `Result : Tie`;
         }
