@@ -10,7 +10,8 @@ if (randomNumber>0 && randomNumber<1){
 }else if(randomNumber>2 && randomNumber<3){
     computerChoice = 'Stump'
 };
-    document.getElementById("choiceDisplay").innerText= `You Choosen ${userinput} And computer choosen ${computerChoice}`;
+    document.getElementById("choiceDisplay").innerText= `Your Choice: ${userinput} 
+    computer choosen: ${computerChoice}`;
     result(userinput,computerChoice);
     
 }
@@ -36,3 +37,6 @@ function result(userinput, computerChoice){
         document.getElementById("resultDisplay").innerText= `Result : Tie`;
     }
 }
+
+let userScores;
+let pcScores;
