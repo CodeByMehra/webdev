@@ -90,4 +90,5 @@ function gameReset(){
     document.getElementById("pcScoreCount").innerText = pcScores;
     document.getElementById("userScoreCount").innerText = userScores;
     document.getElementsByClassName("gamePanel")[0].style.display="inline"
+    document.getElementById("tryAgainButton").style.display="none"
 }
