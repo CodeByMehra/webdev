@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LocalStorage Example - Vishal</title>
+</head>
+<body>
+
+<script>
+    
+    let studentProfile = {
+        name: "Vishal",
+        course: "B.Tech",
+        branch: "CSE Aiml",
+        year: "3rd Year",
+        skills: ["JavaScript", "C++", "HTML", "CSS"],
+    };
+
+    // ✅ 1. Store Basic Info
+    localStorage.setItem('StudentName', 'Vishal');
+    localStorage.setItem('Year', '3rd Year');
+
+    // ✅ 2. Log Basic Info
+    console.log("Student Name from localStorage:", localStorage.getItem('StudentName'));
+    console.log("Current Year from localStorage:", localStorage.getItem('Year'));
+
+    // ✅ 3. Store Complete Profile as String
+    localStorage.setItem('studentProfile', JSON.stringify(studentProfile));
+
+    // ✅ 4. Retrieve and Convert Back to Object
+    let profileFromStorage = JSON.parse(localStorage.getItem('studentProfile'));
+    console.log("Parsed student profile from localStorage:", profileFromStorage);
+
+    // ✅ 5. Remove a Specific Item (Uncomment to use)
+    // localStorage.removeItem('Year');
+
+    // ✅ 6. Clear All Data from localStorage (Uncomment carefully)
+    // localStorage.clear();
+
+</script>
+
+</body>
+</html>
