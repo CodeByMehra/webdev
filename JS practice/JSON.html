@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+
+<body>
+    <script>
+       let product = {
+    Name: "iPhone",
+    Brand: "Apple",
+    rating: {
+        stars: "4.5",
+        reviews: "967",
+    }
+};
+
+console.log("Original product object:", product);
+
+let newProduct = JSON.stringify(product);
+console.log("JSON stringified product:", newProduct);
+
+let convertedProduct = JSON.parse(newProduct);
+console.log("Parsed back to JS object:", convertedProduct);
+
+    </script>
+</body>
+
+</html>
