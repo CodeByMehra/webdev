@@ -1,14 +1,24 @@
-body{
+body {
     margin: 0px;
     padding: 0px;
 }
 
-.mainBox{
+.mainBox {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    align-content: center;
-    align-self: center;
-    max-width: 50px;
+    max-width: 500px;
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-inline: auto;
+    border-radius: 10px;
+    background-color: rgb(245, 244, 243);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+}
+
+.outputBox {
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
