@@ -26,3 +26,55 @@ body{
     margin: 10px;
     padding: 5px;
 }
+
+.icons{
+    margin-right: 10px;
+}
+.icons button {
+    background: none;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.card{
+    background-color: rgb(219, 219, 219);
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.card p {
+    text-align: left;
+    width: 100%;
+    margin: 2px;
+    padding-left:30px;
+}
+
+.card img{
+    max-width: 250px;
+    border-radius: 10px;
+}
+
+#itemBrand{
+    font-weight: bold;
+}
+.pricingSection{
+    text-align: left;
+    width: 100%;
+    margin: 5px;
+    padding-left:30px;
+}
+
+.currentPrice{
+    font-weight: bold;
+}
+
+.mrp{
+    text-decoration: line-through;
+}
