@@ -1,7 +1,7 @@
 body{
     padding: 0px;
     margin: 0px;
-}
+} 
 
 .navBar{
     display: flex;
@@ -69,6 +69,16 @@ body{
     width: 100%;
     margin: 5px;
     padding-left:30px;
+}
+
+.pricingSection button{
+    background: none;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    background-color: rgb(133, 131, 131);
+    border-radius: 50px;
+    margin-left: 40px;
 }
 
 .currentPrice{
