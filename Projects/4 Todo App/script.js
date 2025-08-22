@@ -14,6 +14,7 @@ function getInput() {
                <button onclick="deleteTask(this)">Delete</button>
                `
     }
+    outputBox.appendChild(outputBox);
 
     taskText = document.querySelector('.inputBox input[type="text"]').value= " ";
     taskDate = document.querySelector('.inputBox input[type="date"]').value= " ";
