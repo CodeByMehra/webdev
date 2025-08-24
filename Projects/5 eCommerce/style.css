@@ -69,6 +69,7 @@ body{
     width: 100%;
     margin: 5px;
     padding-left:30px;
+    
 }
 
 .pricingSection button{
@@ -87,4 +88,23 @@ body{
 
 .mrp{
     text-decoration: line-through;
+}
+
+.actionButtons{
+    display: flex;
+    gap: 40px;
+}
+
+.actionButtons button{
+    flex: 1; 
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(184, 183, 183)
+}
+
+.actionButtons button:hover{
+    background-color: rgb(126, 126, 126);
 }
