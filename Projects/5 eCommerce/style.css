@@ -9,9 +9,10 @@ body{
     align-items: center;
     background-color: black;
     color: white;
-    
+    position: fixed;
+    width: 100%;
 }
-#count{
+#cartItemsCount{
     position: absolute;
     top: 2px;
     right: 45px;
@@ -35,6 +36,10 @@ body{
     padding: 5px;
 }
 
+.navBarItems a:hover{
+    background-color: rgb(43, 43, 43);
+}
+
 .icons{
     margin-right: 10px;
 }
@@ -47,6 +52,9 @@ body{
 
 .itemCards{
     display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding-top: 70px;
 }
 
 .card{
