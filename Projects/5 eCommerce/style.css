@@ -12,6 +12,15 @@ body{
     color: white;
     
 }
+#count{
+    position: absolute;
+    top: 2px;
+    right: 45px;
+    background-color: white;
+    border-radius: 50px;
+    padding:2px;
+    font-size: 10px;
+}
 
 .logo{
     font-size: xx-large;
