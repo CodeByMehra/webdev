@@ -1,13 +1,23 @@
-let itemCount = 0;
+let cartCount = 0;  // start with empty cart
 
-function addToCart(){
-    itemCount = itemCount+1 
-    document.getElementById("cartItemsCount").innerText= itemCount;
-    document.getElementById("cartItemsCount").style.display="inline";
-    if(itemCount>20){
-       document.getElementById("cartItemsCount").innerText= "20+"; 
-    }
+function addToCart(name, price) {
+  // increase cart count
+  cartCount = cartCount + 1;
+
+  // find the cart count element in HTML
+  let cartEl = document.getElementById("cartItemsCount");
+
+  // show number of items
+  if (cartCount > 20) {
+    cartEl.innerText = "20+";
+  } else {
+    cartEl.innerText = cartCount;
+  }
+
+  // make it visible (if it was hidden before)
+  cartEl.style.display = "inline";
 }
+
 
 
 const products = [
@@ -40,8 +50,10 @@ const products = [
 let itemCardsContainer = document.querySelector(".itemCards")
 
 for (i=0 ; i< products.length ; i++){
-    let card = document.createElement(div)
-    card.classlist.add("card")
+    let product = products[i];
+    
+    let card = document.createElement("div")
+    card.classList.add("card")
 
      card.innerHTML = `
       <img src="${product.image}" alt="${product.name}">
