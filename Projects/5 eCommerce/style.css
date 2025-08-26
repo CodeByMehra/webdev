@@ -134,57 +134,40 @@ body{
 
 
 /* Mobile Responsiveness section */
-@media (max-width: 768px) {
-  /* Navbar */
-  .navBar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-  }
-
-  .navBarItems {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .navBarItems a {
-    margin: 5px;
-    font-size: 14px;
-  }
-
-  .icons {
-    margin-top: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  /* Product cards */
-  .itemCards {
-    padding-top: 120px; /* because navbar height increased */
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 90%;
-    max-width: 350px;
-  }
-
-  .card img {
+/* Product grid layout */
+.itemCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 15px;
     max-width: 100%;
-    height: auto;
-  }
+    padding-top: 70px;
+    justify-items: center;
+}
 
-  .actionButtons {
+/* Card sizing */
+.card {
+    background-color: rgb(219, 219, 219);
+    width: 100%;   /* take full grid cell */
+    max-width: 250px; /* don’t stretch too much */
+    display: flex;
     flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+}
 
-  .actionButtons button {
-    width: 100%;
-  }
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .itemCards {
+        grid-template-columns: repeat(2, 1fr); /* always 2 items per row on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .itemCards {
+        grid-template-columns: 1fr 1fr; /* still 2 items per row even on small phones */
+        gap: 10px;
+    }
 }
