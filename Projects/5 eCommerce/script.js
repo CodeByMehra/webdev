@@ -21,34 +21,7 @@ function addToCart(name, price) {
 
 
 const products = [
-  {
-    brand: "Zara",
-    name: "Boys Half Sleeve Shirt",
-    price: 1199,
-    mrp: 1900,
-    image: "images/one.jpg"
-  },
-  {
-    brand: "H&M",
-    name: "3 T-Shirts Combo Unisex",
-    price: 1249,
-    mrp: 2400,
-    image: "images/3combo.webp"
-  },
-  {
-    brand: "US POLO",
-    name: "Men's Stripes Casual Shirt",
-    price: 1385,
-    mrp: 2100,
-    image: "images/three.webp"
-  },
-  {
-    brand: "US POLO",
-    name: "Men's Stripes Casual Shirt",
-    price: 1385,
-    mrp: 2100,
-    image: "images/two.webp"
-  },
+  
 ];
 
 let itemCardsContainer = document.querySelector(".itemCards")
