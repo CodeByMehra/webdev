@@ -27,7 +27,7 @@ const products = [
     price: 1199,
     mrp: 1900,
     discount: "62% OFF",
-    image: "images/Boys_Shirt.jpg"
+    image: "images/one.jpg"
   },
   {
     brand: "H&M",
@@ -35,7 +35,7 @@ const products = [
     price: 1249,
     mrp: 2400,
     discount: "55% OFF",
-    image: "images/Tshirt_Combo.webp"
+    image: "images/3combo.webp"
   },
   {
     brand: "US POLO",
@@ -43,7 +43,7 @@ const products = [
     price: 1385,
     mrp: 2100,
     discount: "46% OFF",
-    image: "images/Stripes_Shirt.webp"
+    image: "images/three.webp"
   }
 ];
 
@@ -62,7 +62,7 @@ for (i=0 ; i< products.length ; i++){
       <div class="pricingSection">
           <span class="currentPrice">₹${product.price}</span>
           <span class="mrp">₹${product.mrp}</span>
-          <span class="discount">${discount}% OFF</span>
+          <span class="discount">${product.discount}% OFF</span>
       </div>
       <div class="actionButtons">
           <button>Buy Now</button>
