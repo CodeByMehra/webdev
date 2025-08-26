@@ -1,27 +1,65 @@
-let cartCount = 0;  // start with empty cart
+let cartCount = 0; 
 
 function addToCart(name, price) {
-  // increase cart count
   cartCount = cartCount + 1;
 
-  // find the cart count element in HTML
   let cartEl = document.getElementById("cartItemsCount");
 
-  // show number of items
   if (cartCount > 20) {
     cartEl.innerText = "20+";
   } else {
     cartEl.innerText = cartCount;
   }
 
-  // make it visible (if it was hidden before)
   cartEl.style.display = "inline";
 }
 
 
 
 const products = [
-  
+  {
+    brand: "Zara",
+    name: "Boys Half Sleeve Shirt",
+    price: 1199,
+    mrp: 1900,
+    image: "images/one.jpg"
+  },
+  {
+    brand: "H&M",
+    name: "3 T-Shirts Combo Unisex",
+    price: 1249,
+    mrp: 2400,
+    image: "images/3combo.webp"
+  },
+  {
+    brand: "US POLO",
+    name: "solid formal Shirt",
+    price: 1445,
+    mrp: 2190,
+    image: "images/three.webp"
+  },
+  {
+    brand: "US POLO",
+    name: "Mes Stripes Casual Shirt",
+    price: 1385,
+    mrp: 2100,
+    image: "images/two.webp"
+  },
+  {
+    brand: "US POLO",
+    name: "Mens Hal sleeve Shirt",
+    price: 1385,
+    mrp: 2100,
+    image: "images/four.webp"
+  },
+
+  {
+    brand: "Red Tape",
+    name: `Mens Solid Casual Shirt`,
+    price: 1076,
+    mrp: 1600,
+    image: "images/five.webp"
+  },
 ];
 
 let itemCardsContainer = document.querySelector(".itemCards")
@@ -53,4 +91,6 @@ for (i=0 ; i< products.length ; i++){
   `;
 
   itemCardsContainer.appendChild(card);
+
+  
 }
