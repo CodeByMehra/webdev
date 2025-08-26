@@ -26,7 +26,6 @@ const products = [
     name: "Boys Half Sleeve Shirt",
     price: 1199,
     mrp: 1900,
-    discount: "62% OFF",
     image: "images/one.jpg"
   },
   {
@@ -34,7 +33,6 @@ const products = [
     name: "3 T-Shirts Combo Unisex",
     price: 1249,
     mrp: 2400,
-    discount: "55% OFF",
     image: "images/3combo.webp"
   },
   {
@@ -42,16 +40,27 @@ const products = [
     name: "Men's Stripes Casual Shirt",
     price: 1385,
     mrp: 2100,
-    discount: "46% OFF",
     image: "images/three.webp"
-  }
+  },
+  {
+    brand: "US POLO",
+    name: "Men's Stripes Casual Shirt",
+    price: 1385,
+    mrp: 2100,
+    image: "images/two.webp"
+  },
 ];
 
 let itemCardsContainer = document.querySelector(".itemCards")
 
 for (i=0 ; i< products.length ; i++){
     let product = products[i];
-    
+
+    let discountvalue = function (price , mrp){
+      let discountvalue= Math.round(price/mrp * 100)
+        return discountvalue;
+    }
+        
     let card = document.createElement("div")
     card.classList.add("card")
 
@@ -62,7 +71,7 @@ for (i=0 ; i< products.length ; i++){
       <div class="pricingSection">
           <span class="currentPrice">₹${product.price}</span>
           <span class="mrp">₹${product.mrp}</span>
-          <span class="discount">${product.discount}% OFF</span>
+          <span class="discount">${discountvalue(product.price, product.mrp)}% OFF</span>
       </div>
       <div class="actionButtons">
           <button>Buy Now</button>
