@@ -131,3 +131,60 @@ body{
 .actionButtons button:hover{
     background-color: rgb(126, 126, 126);
 }
+
+
+/* Mobile Responsiveness section */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navBar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .navBarItems {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navBarItems a {
+    margin: 5px;
+    font-size: 14px;
+  }
+
+  .icons {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* Product cards */
+  .itemCards {
+    padding-top: 120px; /* because navbar height increased */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .card img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .actionButtons {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .actionButtons button {
+    width: 100%;
+  }
+}
