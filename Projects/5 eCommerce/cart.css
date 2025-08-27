@@ -57,14 +57,45 @@ body{
 }
 
 .itemContainer{
+    background-color: rgb(223, 223, 223);
     display: flex;
+    max-width: 500px;
+    max-height: 200px;
+    border-radius: 10px;
+}
+
+.itemDetails {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.pricingSection {
+    margin-top: 5px;
+}
+
+.currentPrice {
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.mrp {
+    text-decoration: line-through;
+    margin-right: 8px;
+    color: gray;
+}
+
+.discount {
+    color: rgb(36, 202, 36);
+    font-weight: bold;
 }
 
 .itemContainer img{
-    max-width: 150px;
-    padding: 5px;
+    max-height: 150px;
+    padding: 10px;
+    border-radius: 15px;
 }
 
-.itemBrand{
-    font-weight: bold;
+.deliveryDate{
+    padding-top: 30px;
 }
