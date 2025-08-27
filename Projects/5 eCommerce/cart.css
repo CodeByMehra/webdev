@@ -1,0 +1,70 @@
+body{
+    padding: 0px;
+    margin: 0px;
+} 
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    position: fixed;
+    width: 100%;
+}
+#cartItemsCount {
+     position: absolute;
+    top: 2px;
+    right: 45px;
+    background-color: white;
+    border-radius: 50px;
+    padding:2px;
+    font-size: 10px;
+}
+
+
+.logo{
+    font-size: xx-large;
+    margin: 10px;
+    padding: 5px;
+}
+
+.navBarItems a{
+    text-decoration: none;
+    color: white;
+    gap: 10px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.navBarItems a:hover{
+    background-color: rgb(43, 43, 43);
+}
+
+.icons{
+    margin-right: 10px;
+}
+.icons button {
+    background: none;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.addedItems{
+    padding-top: 80px;
+    padding-left: 20px;
+}
+
+.itemContainer{
+    display: flex;
+}
+
+.itemContainer img{
+    max-width: 150px;
+    padding: 5px;
+}
+
+.itemBrand{
+    font-weight: bold;
+}
