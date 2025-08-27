@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eCommerce</title>
-    <link rel="stylesheet" href="style.css">
+    <title>LuxeClothing-Cart</title>
+    <link rel="stylesheet" href="cart.css">
 </head>
 
 <body>
@@ -13,22 +13,23 @@
 
         <div class="logo">LuxeClothing</div>
         <div class="navBarItems">
-            <a href="#">HOME</a>
+            <a href="index.html">HOME</a>
             <a href="">MEN</a>
             <a href="">WOMEN</a>
             <a href="">KIDS</a>
         </div>
         <div class="icons">
-
             <button>
                 <img src="icons/favorite_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="wishlsit">
             </button>
+            
             <a href="cart.html">
                 <button>
                 <p id="cartItemsCount" style="display: none;"></p>
                 <img src="icons/shopping_cart_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="cart">
             </button>
             </a>
+
             <button>
                 <img src="icons/person_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="profile">
             </button>
@@ -36,23 +37,18 @@
         </div>
     </section>
 
-    <section class="itemCards">
-
-    </section>
-
-    <footer>
-        <div class="footer">
-            <h3>Thanks For Visit</h3>
-            <p>&copy All copyrights reserved by mehra corporation</p>
-            <p class="contact">
-            <h3>Contact Developer:</h3>
-            <p>Mobile: 8146841916</p>
-            <p>Instagram: <a id="social" target="_blank" href="https://www.instagram.com/vishal_mehra_16/">Vishal
-                    Mehra</a></p>
-            </p>
+    <section class="addedItems">
+        <div class="itemContainer">
+            <img src="images/three.webp" alt="${product.name}">
+            <p class="itemBrand">US Polo Assn.</p>
+            <p>Mens full sleeve t shrt</p>
+            <div class="pricingSection">
+                <span class="currentPrice">910</span>
+                <span class="mrp">₹1800</span>
+                <span class="discount">50% OFF</span>
+            </div>
         </div>
-    </footer>
-    <script src="script.js"></script>
+    </section>
 </body>
 
 </html>

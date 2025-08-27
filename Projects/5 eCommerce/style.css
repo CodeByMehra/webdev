@@ -131,3 +131,18 @@ body{
 .actionButtons button:hover{
     background-color: rgb(126, 126, 126);
 }
+
+.footer{
+    background-color: black;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.contact{
+    padding: 20px;
+}
+
+#social{
+    color: white;
+}
