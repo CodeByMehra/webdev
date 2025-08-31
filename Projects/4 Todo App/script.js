@@ -16,7 +16,10 @@ function getInput() {
             <h4>${taskDate}</h4>
             <button onclick="deleteTask(this)">Delete</button>
         `;
-        
+        outputBox.appendChild(taskArea);
+
+        document.querySelector('.inputBox input[type="text"]').value = "";
+        document.querySelector('.inputBox input[type="date"]').value = "";
     }
 }
 
