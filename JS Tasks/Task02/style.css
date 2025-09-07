@@ -1,0 +1,8 @@
+img{
+    max-width: 100px;
+}
+
+button{
+    display: flex;
+    margin-left: 80px;
+}
