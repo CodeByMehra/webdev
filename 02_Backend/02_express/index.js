@@ -8,6 +8,18 @@ app.listen(port, () => { // Start the server and listen on the given port
     console.log(`App is responding at port : ${port}`) // Log confirmation when server starts
 });
 
-app.use((req, res) => { // Middleware to handle every incoming request
-    console.log("Request received!!") // Log a message whenever a request hits the server
+// app.use((req, res) => { // Middleware to handle every incoming request
+//     console.log("Request received!!") // Log a message whenever a request hits the server
+// })
+
+app.get("/", (req,res)=>{
+    res.send("You're in Root path")
+})
+
+app.get("/help", (req,res)=>{
+    res.send(" Welcome to the help Desk of Localhost")
+})
+
+app.get("*", (req,res)=>{    //default response
+    res.send("Path does not exist")
 })
