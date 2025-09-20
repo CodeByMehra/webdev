@@ -19,7 +19,11 @@ app.get("/", (req,res)=>{
 app.get("/help", (req,res)=>{
     res.send(" Welcome to the help Desk of Localhost")
 })
+//  //default response
+// app.get("/*", (req,res)=>{   
+//     res.send("Path does not exist")
+// })
 
-app.get("*", (req,res)=>{    //default response
-    res.send("Path does not exist")
+app.post("/", (req,res)=>{
+    res.send("you sent a post request")
 })
