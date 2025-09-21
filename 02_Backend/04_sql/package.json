@@ -1,0 +1,14 @@
+{
+  "name": "04_sql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vishal Mehra",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^10.0.0"
+  }
+}
