@@ -1,3 +1,4 @@
+//it is a process to do the routing by changeing the parameters based on request dynamically
 const express = require('express')
 const app = express();
 
