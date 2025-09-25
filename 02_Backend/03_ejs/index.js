@@ -1,29 +1,16 @@
-const express = require("express"); // Import the Express framework
-const app = express(); // Create an Express application object
+const express = require('express')
+const app = express();
 
-console.dir(app); // Print the app object details to the console (for debugging/inspection)
+app.set('view engine', 'ejs');
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-let port = 3000; // Define the port number where the server will run
-app.listen(port, () => { // Start the server and listen on the given port
-    console.log(`App is responding at port : ${port}`) // Log confirmation when server starts
-});
-
-// app.use((req, res) => { // Middleware to handle every incoming request
-//     console.log("Request received!!") // Log a message whenever a request hits the server
-// })
-
-app.get("/", (req,res)=>{
-    res.render("home.ejs")
+app.get("/", function (req, res) {
+  res.render("index");
 })
 
-app.get("/help", (req,res)=>{
-    res.send(" Welcome to the help Desk of Localhost")
+app.get("/check", function (req, res) {
+  res.send("Working")
 })
-//  //default response
-// app.get("/*", (req,res)=>{   
-//     res.send("Path does not exist")
-// })
 
-app.post("/", (req,res)=>{
-    res.send("you sent a post request")
-})
+app.listen(3000);
