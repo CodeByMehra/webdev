@@ -7,5 +7,5 @@
 //4. wo route ka type sahi hai ya nahi
 
 //5. route ke andar aapko data unke type ke hisaab se milega
-    // GET - req.query
-    // POST - req.body
+    // GET - req.query     - It is set by default, data can be seen in the url
+    // POST - req.body     - data cannot be seen in the url
