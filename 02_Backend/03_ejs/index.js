@@ -6,10 +6,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", function (req, res) {
-  res.render("index");
+  res.render("form");   
 })
 
 app.get("/check", function (req, res) {
+  console.log(req.query)
   res.send("Working")
 })
 
