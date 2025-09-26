@@ -14,8 +14,11 @@ app.get("/", (req, res) => {
 
 app.get("/create", (req, res) => {
   const day = String(today.getDate()).padStart(2, "0");
-  const month = String(today.getMonth() + 1).padStart(2, "0"); // Months are 0-indexed, so we add 1
+  const month = String(today.getMonth() + 1).padStart(2, "0"); 
   const year = String(today.getFullYear()).slice(-2);
+
+  const date= `${day}-${month}-${year}.txt`
+  fs.writeFile(date, "check check")
 });
 
 app.listen(3000);
