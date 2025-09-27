@@ -7,10 +7,11 @@
 </head>
 <body>
   <h1>Your files:</h1>
-  <ul>
+ 
     <% files.forEach(function(file) { %>
-      <li><%= file %></li>
+      <h3><%= file %></h3>
+      <a href="/edit/<%= file %>">Edit</a>
     <% }) %>
-  </ul>
+  
 </body>
 </html>
