@@ -28,6 +28,13 @@ app.post("/update/:filename", (req, res) => {
   })
 });
 
+app.get("/delete/:filename", (req, res) => {
+  fs.unlink(`./files/${req.params.filename}`, function(err) {
+    if(err) res.send(err);
+    res.redirect("/")
+  })
+});
+
 app.get("/create", (req, res) => {
   const today = new Date();
   const day = String(today.getDate()).padStart(2, "0");
