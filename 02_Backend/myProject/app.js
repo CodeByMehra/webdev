@@ -42,7 +42,7 @@ app.get("/create", (req, res) => {
   }
   res.send(`File ${date} created successfully!`);
 });
-  res.send(`File ${date} created successfully!`);
+  res.send(`File ${date} created successfully`);
 });
 
 app.listen(3000); 
