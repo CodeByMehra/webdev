@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.send("hey");
+  res.render("index", "files");
 });
 
 app.get("/create", (req, res) => {
