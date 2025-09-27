@@ -9,7 +9,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.render("index", "files");
+  fs.readdir(`./files`, function(err,files){
+    res.render("index", {files});
+  })
 });
 
 app.get("/create", (req, res) => {
