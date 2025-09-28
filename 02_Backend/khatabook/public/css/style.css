@@ -29,3 +29,12 @@ body{
     max-width: fit-content;
     margin: 8px;
 }
+
+.taskButtons{
+    display: flex;
+}
+
+.taskButtons a img {
+    width: 20px;
+    height: 20px;
+}
