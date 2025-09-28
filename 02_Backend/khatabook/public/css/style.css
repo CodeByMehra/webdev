@@ -4,12 +4,23 @@ body{
 }
 
 .navbar{
+    padding-top: 10px;
     display: flex;
     justify-content: space-around;
-    align-items: end;
-    align-content: end;
+    gap: 300px;
 }
 
 .navButtons{
-    
+    display: flex;
+    gap: 20px;
+}
+
+.task{
+    display: flex;
+    background-color: rgba(0, 154, 214, 0.911);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    max-width: fit-content;
+    margin: 8px;
 }
