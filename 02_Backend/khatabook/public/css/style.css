@@ -8,11 +8,16 @@ body{
     display: flex;
     justify-content: space-around;
     gap: 300px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .navButtons{
     display: flex;
     gap: 20px;
+}
+
+.display h3{
+    margin: 15px 10px;
 }
 
 .task{
