@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Hisaab</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Khaatabook</h1>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/create">Create New Hisaab</a>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Create New Hisaab</h2>
+            <form action="/create" method="POST">
+                <input type="text" name="title" placeholder="Enter filename without extension (e.g., shopping-list)" required>
+                <textarea name="details" placeholder="Enter hisaab details here..." required></textarea>
+                <button type="submit">Create New Hisaab</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
