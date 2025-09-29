@@ -19,8 +19,16 @@ app.get("/edit", (req, res)=>{
     res.render("edit")
 });
 
-app.post("/create", (req, res)=>{
+app.get("/create", (req, res)=>{
     res.render("create")
+});
+
+
+app.post("/createhisaab", (req, res)=>{
+    fs.writeFile(`./hisaab/${req.body.title}`, req.body.content, function(err){
+        if(err) res.status(500).send(err);
+        res.redirect("/")
+    })
 });
 
 app.get("/show", (req, res)=>{
