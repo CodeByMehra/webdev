@@ -1,40 +1,130 @@
-body{
-    margin: 0px;
-    padding: 0px;
+/* Basic Reset and Font Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.navbar{
-    padding-top: 10px;
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    padding: 2rem 4rem;
+}
+
+/* Main Container for Centering Content */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Header/Navigation Bar */
+header {
     display: flex;
-    justify-content: space-around;
-    gap: 300px;
-    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
 }
 
-.navButtons{
+header h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #495057;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+/* Main Content Styling */
+main h2 {
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+/* Hisaab List on Homepage */
+.hisaab-list {
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 0.75rem;
 }
 
-.display h3{
-    margin: 15px 10px;
-}
-
-.task{
+.hisaab-list-item {
     display: flex;
-    background-color: rgba(0, 154, 214, 0.911);
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
     color: white;
-    padding: 5px;
-    border-radius: 5px;
-    max-width: fit-content;
-    margin: 8px;
+    padding: 1.25rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
 }
 
-.taskButtons{
+.hisaab-list-item .actions a {
+    color: white;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem;
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.hisaab-list-item .actions a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Form Styling (for Create and Edit pages) */
+form {
     display: flex;
+    flex-direction: column;
 }
 
-.taskButtons a img {
-    width: 20px;
-    height: 20px;
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background-color: #fff;
+}
+
+form textarea {
+    min-height: 250px;
+    resize: vertical;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.2s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Show Hisaab Page Styling */
+.hisaab-content p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    white-space: pre-wrap; /* Preserves whitespace and line breaks */
 }

@@ -1,40 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khatabook</title>
-    <link rel="stylesheet" href="/02_backEnd/khatabook/public/css/style.css">
+    <title>Khaatabook - Home</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
-
 <body>
-    <nav class="navbar">
-        <div class="brandName">Khatabook</div>
-        <div class="navButtons">
-            <a>Home</a>
-            <a>Create New Hisab</a>
-        </div>
-    </nav>
+    <div class="container">
+        <header>
+            <h1>Khaatabook</h1>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/create">Create New Hisaab</a>
+            </nav>
+        </header>
 
-    <div class="display">
-        <h3>Your Hisab kitab</h3>
-        <div class="tasksContainer">
-            
-            <div class="task">
-                <div class="section1">
-                    <div>20-09-2025</div>
-                    <div><a class="arrowBtn"><img src="/02_backEnd/khatabook/public/images/icons/arrow_circle_right_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt=""></a></div>
-                </div>
-                <div class="taskButtons">
-                    <a class="editBtn"><img src="/02_backEnd/khatabook/public/images/icons/edit_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt=""></a>
-                    <a class="deleteBtn"><img src="/02_backEnd/khatabook/public/images/icons/delete_24dp_EA3323_FILL0_wght400_GRAD0_opsz24.png" alt=""></a>
+        <main>
+            <h2>All Hisaab Kitaab</h2>
+            <div class="hisaab-list">
+                <% if (files.length > 0) { %>
+                    <% files.forEach(function(filename) { %>
+                        <div class="hisaab-list-item">
+                            <a href="/hisaab/<%= filename %>" style="color: white; text-decoration: none;"><%= filename %></a>
+                            <div class="actions">
+                                <a href="/edit/<%= filename %>">✏️</a>
+                                <a href="/delete/<%= filename %>">🗑️</a>
+                            </div>
+                        </div>
+                    <% }) %>
+                <% } else { %>
+                    <p>No hisaabs created yet. <a href="/create">Create one now!</a></p>
+                <% } %>
             </div>
-
-    
-            </div>
-        </div>
+        </main>
     </div>
 </body>
-
 </html>
