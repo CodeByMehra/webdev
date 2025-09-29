@@ -9,7 +9,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, "public")))
 
 app.get("/", (req, res)=>{
-    fs.readdir("./files", function(err, files){
+    fs.readdir("./hisaab", function(err, files){
         res.render("index" , {files: files})
     })
     
@@ -19,7 +19,7 @@ app.get("/edit", (req, res)=>{
     res.render("edit")
 });
 
-app.get("/create", (req, res)=>{
+app.post("/create", (req, res)=>{
     res.render("create")
 });
 
