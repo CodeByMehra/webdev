@@ -36,13 +36,7 @@ app.get("/delete/:filename", (req, res) => {
 });
 
 app.get("/create", (req, res) => {
-    fs.readdir(hisaab, (err, files) => {
-        if (err) {
-            console.log("Error reading files:", err);
-            return res.render("index", { files: [] });  // if error, send empty
-        }
-        res.render("index", { files });  // ✅ files is passed to EJS
-    });
+  res.render("create", {files});
 });
 
 // app.post("/createhisaab", (req, res) => {
