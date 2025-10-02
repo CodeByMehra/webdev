@@ -4,7 +4,7 @@ const app = express();
 const mongooseconnection = require('./config/mongoose');
 
 app.get("/",function(req,res,next){
-    res.send("heyy")
+    res.send("hey")
 });
 
 app.listen(3000);
