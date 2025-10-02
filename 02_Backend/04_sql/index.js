@@ -1,15 +1,10 @@
-import { faker } from '@faker-js/faker';
+const express = require('express');
+const app = express();
 
-// or, if desiring a different locale
-// import { fakerDE as faker } from '@faker-js/faker';
+const mongooseconnection = require('./config/mongoose');
 
-let getUser = () => {
-return{
-    "userid": faker.string.uuid(),
-    // "username": faker.person.user_name(),
-    "email": faker.internet.email(),
-    // "password": faker.password()
-}
-}
+app.get("/",function(req,res,next){
+    res.send("heyy")
+});
 
-console.log(getUser());
+app.listen(3000);
