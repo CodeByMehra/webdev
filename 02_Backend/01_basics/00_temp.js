@@ -1,2 +1,2 @@
-// continue from video 124
+// continue from video 126 (but fix errors first)
 
