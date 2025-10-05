@@ -20,4 +20,10 @@ app.get("/create",async function(req,res,next){
     res.send(createdUser);
 });
 
+// app.get("/read",async function(req,res,next){
+//     let users = await userModel.findOne();
+//     debuglog("readed");
+//     res.send(users);
+// });
+
 app.listen(3000);
