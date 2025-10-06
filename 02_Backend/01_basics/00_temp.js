@@ -1,2 +1,2 @@
-// continue from video 126 
+// continue from the video 126 
 
