@@ -27,7 +27,7 @@ app.get("/update",async function(req,res,next){
 
 app.get("/read",async function(req,res,next){
     let users = await userModel.findOne();
-    debuglog("readed");
+    debuglog(" readed");
     res.send(users);
 });
 
