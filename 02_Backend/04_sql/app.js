@@ -22,7 +22,7 @@ app.post("/create", async function(req, res, next){
         password
     });
 
-    
+    res.send(createduser);
 });
 
 app.get("/update",async function(req,res,next){
