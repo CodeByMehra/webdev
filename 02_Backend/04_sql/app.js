@@ -12,6 +12,11 @@ app.get("/",function(req,res,next){
     res.send("hey")
 });
 
+app.get("/users",async function(req,res,next){
+    let users=await userModel.findOne();
+    res.send(users);
+});
+
 app.post("/create", async function(req, res, next){
     let {name, email, password, username} = req.body;
 
