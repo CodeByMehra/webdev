@@ -13,7 +13,7 @@ app.get("/",function(req,res,next){
 });
 
 app.get("/users",async function(req,res,next){
-    let users=await userModel.findOne();
+    let users=await userModel.find();
     console.log(users);
     res.send(users);
 });
