@@ -3,21 +3,26 @@ const app = express();
 const userModel = require("./models/user");
 const debuglog = require("debug")("development:app")
 
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+
 const mongooseconnection = require('./config/mongoose');
 
 app.get("/",function(req,res,next){
     res.send("hey")
 });
 
-app.get("/create",async function(req,res,next){
-    let createdUser = await userModel.create({
-        username: "vishalmhra", 
-        name: "vishal",
-        email: "v@gmail.com",
-        password: "vish1122"
-    })
-    debuglog("user created");
-    res.send(createdUser);
+app.post("/create", async function(req, res, next){
+    let {name, email, password, username} = req.body;
+
+    let createduser = await userModel.create({
+        name,
+        username,
+        email,
+        password
+    });
+
+    
 });
 
 app.get("/update",async function(req,res,next){
