@@ -15,6 +15,12 @@ app.get("/", (req, res)=>{
     
 });
 
+app.get("/hisaab", (req, res)=>{
+    fs.readdir("./hisaab", function(err, files){
+        res.render("index" , {files: files})
+    })
+});
+
 app.get("/edit/:filename", (req, res) => {
   fs.readFile(`./hisaab/${req.params.filename}`, "utf-8", function(err, data) {
     if(err) res.send(err);
