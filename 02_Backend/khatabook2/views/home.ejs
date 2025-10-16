@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+
+<div class="container page-container">
+    <div class="home-filters">
+        <div class="filter-group">
+            <button class="btn btn-outline">Filters</button>
+            <button class="btn btn-outline">By date</button>
+        </div>
+        <button class="btn btn-outline">Newest First</button>
+    </div>
+    
+    <div class="hisaab-grid">
+        <% hisaabs.forEach(hisaab => { %>
+            <div class="hisaab-card">
+                <div class="hisaab-card-header">
+                    <span class="tag <%= hisaab.isEncrypted ? 'tag-blue' : 'tag-green' %>">
+                        <%= hisaab.isEncrypted ? 'Encrypted' : 'Available' %>
+                    </span>
+                    <span class="hisaab-date">Created on <%= hisaab.createdDate %></span>
+                </div>
+                <h3 class="hisaab-title"><%= hisaab.title %></h3>
+                <a href="/view/<%= hisaab.id %>" class="hisaab-link">View Hisaab →</a>
+            </div>
+        <% }) %>
+    </div>
+</div>
+
+<%- include('partials/footer') %>
