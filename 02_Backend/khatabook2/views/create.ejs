@@ -1,0 +1,51 @@
+<%- include('partials/header') %>
+
+<div class="container page-container">
+    <div class="card create-card">
+        <h2 class="form-title">Create New Hisaab</h2>
+        <form action="/create" method="POST" class="form-group">
+            <input 
+                type="text"
+                name="title"
+                placeholder="Shopping, Ghar ka Kharch..." 
+                class="input-field"
+                required
+            />
+            <textarea
+                name="details"
+                placeholder="Daal, Aata, Cheeni"
+                rows="6"
+                class="textarea-field"
+                required
+            ></textarea>
+            
+            <div class="checkbox-group">
+                <div class="checkbox-container">
+                    <input type="checkbox" id="encrypt" name="isEncrypted" class="checkbox">
+                    <label for="encrypt">Encrypt this file</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="shareable" name="isShareable" class="checkbox">
+                    <label for="shareable">Shareable file?</label>
+                </div>
+            </div>
+            
+            <input type="password" name="passcode" placeholder="Passcode" class="input-field" style="display: none;">
+            
+            <button type="submit" class="btn btn-primary">Create New Hisaab</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.getElementById('encrypt').addEventListener('change', function(e) {
+        const passcodeField = document.querySelector('input[name="passcode"]');
+        if (e.target.checked) {
+            passcodeField.style.display = 'block';
+        } else {
+            passcodeField.style.display = 'none';
+        }
+    });
+</script>
+
+<%- include('partials/footer') %>
