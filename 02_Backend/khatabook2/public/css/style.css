@@ -1,130 +1,405 @@
-/* Basic Reset and Font Styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* --- Global Styles & Variables --- */
+:root {
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-100: #dbeafe;
+    --blue-800: #1e40af;
+    --red-600: #dc2626;
+    --red-700: #b91c1c;
+    --green-100: #dcfce7;
+    --green-800: #166534;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-500: #6b7280;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+    --white: #ffffff;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #212529;
-    padding: 2rem 4rem;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    color: var(--gray-800);
 }
 
-/* Main Container for Centering Content */
+a {
+    color: var(--blue-600);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.bg-gray-50 {
+    background-color: var(--gray-50);
+}
+
 .container {
-    max-width: 900px;
-    margin: 0 auto;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
-/* Header/Navigation Bar */
-header {
+/* --- Header --- */
+.header {
+    background-color: var(--white);
+    box-shadow: var(--shadow-sm);
+}
+
+.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
-header h1 {
-    font-size: 1.75rem;
-    font-weight: 600;
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--gray-800);
+}
+.nav-brand:hover { text-decoration: none; }
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-header nav a {
+.nav-links a {
+    color: var(--gray-500);
+}
+
+.nav-links a:hover {
+    color: var(--blue-600);
     text-decoration: none;
-    color: #495057;
-    margin-left: 1.5rem;
-    font-weight: 500;
-    font-size: 1rem;
 }
 
-/* Main Content Styling */
-main h2 {
-    font-weight: 500;
+.avatar {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--gray-300);
+    border-radius: 9999px;
+}
+
+/* --- Card --- */
+.card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+    text-align: center;
+    color: var(--gray-500);
     margin-bottom: 1.5rem;
 }
 
-/* Hisaab List on Homepage */
-.hisaab-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+
+/* --- Buttons --- */
+.btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s, border-color 0.3s;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.btn:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px var(--white), 0 0 0 4px var(--blue-600);
 }
 
-.hisaab-list-item {
+.btn-primary {
+    background-color: var(--blue-600);
+    color: var(--white);
+}
+.btn-primary:hover {
+    background-color: var(--blue-700);
+}
+
+.btn-danger {
+    background-color: var(--red-600);
+    color: var(--white);
+}
+.btn-danger:hover {
+    background-color: var(--red-700);
+}
+
+.btn-secondary {
+    background-color: var(--gray-200);
+    color: var(--gray-800);
+}
+.btn-secondary:hover {
+    background-color: var(--gray-300);
+}
+
+
+.btn-outline {
+    background-color: var(--white);
+    border-color: var(--gray-300);
+    color: var(--gray-700);
+}
+
+.btn-outline:hover {
+    background-color: var(--gray-50);
+}
+
+/* --- Forms --- */
+.form-group {
     display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-field, .textarea-field {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: var(--gray-50);
+    border: 1px solid var(--gray-300);
+    border-radius: 0.5rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+}
+
+.input-field:focus, .textarea-field:focus {
+    outline: none;
+    border-color: var(--blue-600);
+    box-shadow: 0 0 0 2px var(--blue-100);
+}
+
+.auth-switch {
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--gray-500);
+    margin-top: 1.5rem;
+}
+
+/* --- Page Specific --- */
+.page-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Auth Pages */
+.auth-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.auth-card {
+    width: 100%;
+    max-width: 28rem; /* 448px */
+}
+
+/* Home Page */
+.home-filters {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: #007bff;
-    color: white;
-    padding: 1.25rem 1.5rem;
-    border-radius: 8px;
-    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+@media (min-width: 768px) {
+    .home-filters {
+        flex-direction: row;
+    }
 }
 
-.hisaab-list-item .actions a {
-    color: white;
+.filter-group {
+    display: flex;
+    gap: 1rem;
+}
+.home-filters .btn {
+    width: auto;
+    padding: 0.5rem 1rem;
+}
+
+.hisaab-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+}
+@media (min-width: 768px) {
+    .hisaab-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 1024px) {
+    .hisaab-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.hisaab-card {
+    background-color: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    transition: box-shadow 0.3s;
+}
+.hisaab-card:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.hisaab-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+.hisaab-date {
+    font-size: 0.75rem;
+    color: var(--gray-500);
+}
+
+.hisaab-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+}
+
+.hisaab-link {
+    font-weight: 600;
+}
+.hisaab-link:hover {
+    color: var(--blue-800);
     text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 0.5rem;
-    width: 35px;
-    height: 35px;
+}
+
+/* Tags */
+.tag {
     display: inline-flex;
-    justify-content: center;
     align-items: center;
-    border-radius: 50%;
-    margin-left: 0.5rem;
-    font-weight: bold;
-    transition: background-color 0.2s;
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 9999px;
+}
+.tag-blue {
+    background-color: var(--blue-100);
+    color: var(--blue-800);
+}
+.tag-green {
+    background-color: var(--green-100);
+    color: var(--green-800);
+}
+.tag-gray {
+    background-color: var(--gray-100);
+    color: var(--gray-800);
+}
+.tag-gray:hover {
+    background-color: var(--gray-200);
+    text-decoration: none;
 }
 
-.hisaab-list-item .actions a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+
+/* Create/View Page */
+.create-card, .view-card {
+    max-width: 56rem; /* 896px */
+    margin-left: auto;
+    margin-right: auto;
+}
+.form-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+.checkbox-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+@media(min-width: 768px) {
+    .checkbox-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-/* Form Styling (for Create and Edit pages) */
-form {
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+.checkbox {
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.5rem;
+}
+.checkbox-container label {
+    font-size: 0.875rem;
+}
+
+.view-header {
     display: flex;
     flex-direction: column;
-}
-
-form input[type="text"],
-form textarea {
-    width: 100%;
-    padding: 1rem;
-    font-size: 1rem;
-    border: 1px solid #ced4da;
-    border-radius: 8px;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
     margin-bottom: 1rem;
-    background-color: #fff;
+}
+@media (min-width: 768px) {
+    .view-header {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+.view-tags {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.view-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.view-actions .btn {
+    width: auto;
+    padding: 0.5rem 1rem;
 }
 
-form textarea {
-    min-height: 250px;
-    resize: vertical;
+.view-content {
+    border-top: 1px solid var(--gray-200);
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
 }
-
-form button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 500;
-    border-radius: 8px;
-    cursor: pointer;
-    align-self: flex-start;
-    transition: background-color 0.2s;
+.view-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem 0;
 }
-
-form button:hover {
-    background-color: #0056b3;
-}
-
-/* Show Hisaab Page Styling */
-.hisaab-content p {
+.view-details {
+    color: var(--gray-700);
+    white-space: pre-wrap;
     line-height: 1.6;
-    font-size: 1.1rem;
-    white-space: pre-wrap; /* Preserves whitespace and line breaks */
+}
+.icon {
+    height: 1rem;
+    width: 1rem;
 }
