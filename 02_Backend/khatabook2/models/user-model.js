@@ -27,4 +27,15 @@ const userSchema = mongoose.Schema({
     }
 })
 
+function validateModel(data){
+    Joi.object({
+        username: Joi.string().min(3).required(),
+        name: Joi.string().min(3).required(),
+        email: Joi.email().required(),
+        age: Joi.number().min(18).required(),
+        contact: Joi.number().required()
+    })
+    Schema.validate(data)
+}
+
 module.exports = module.exports("User", userSchema)
