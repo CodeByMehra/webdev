@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, "public")))
 
-const userModel = require("./models/user-model")
+const {userModel, validateModel} = require("./models/user-model")
 
 app.get("/", function(req, res){
     res.send("working");

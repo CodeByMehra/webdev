@@ -35,7 +35,8 @@ function validateModel(data){
         age: Joi.number().min(18).required(),
         contact: Joi.number().required()
     })
-    Schema.validate(data)
+    let resolveans = Schema.validate(data);
+    return resolveans;
 }
-
-module.exports = module.exports("User", userSchema)
+let userModel = module.exports("User", userSchema);
+module.exports = {validateModel, userModel}
