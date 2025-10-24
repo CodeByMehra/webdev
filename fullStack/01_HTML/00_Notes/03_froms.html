@@ -3,11 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HTML Forms Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f5f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .note-container {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            max-width: 900px;
+            margin: 30px auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            line-height: 1.6;
+        }
+
+        h2 {
+            color: #444;
+            border-bottom: 2px solid #007bff;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        code, pre {
+            background-color: #eee;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: block;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+
+        th, td {
+            border: 1px solid #bbb;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #e8f0fe;
+        }
+
+        /* Style for form demo */
+        form {
+            background-color: #fefefe;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        input, select, textarea, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .highlight {
+            background-color: #e8f0fe;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
 </head>
 <body>
-    <div>
-        Forms
+
+    <h1>📘 HTML Forms Notes with Example</h1>
+
+    <div class="note-container">
+        <h2>Definition</h2>
+        <p>Forms in HTML are used to <strong>collect data from users</strong>. They are created using the <span class="highlight">&lt;form&gt;</span> tag and can include elements like input fields, checkboxes, radio buttons, and buttons.</p>
+
+        <h2>Form Tag Syntax</h2>
+        <pre>
+&lt;form action="server_url" method="get/post"&gt;
+    &lt;!-- form elements go here --&gt;
+&lt;/form&gt;
+        </pre>
+
+        <h2>Form Attributes</h2>
+        <table>
+            <tr><th>Attribute</th><th>Description</th></tr>
+            <tr><td><b>action</b></td><td>Specifies where to send form data (URL or file).</td></tr>
+            <tr><td><b>method</b></td><td>Defines how data is sent — <code>GET</code> or <code>POST</code>.</td></tr>
+            <tr><td><b>name</b></td><td>Assigns a name to the form.</td></tr>
+            <tr><td><b>target</b></td><td>Specifies where to display the response.</td></tr>
+            <tr><td><b>enctype</b></td><td>Defines encoding type (used with file uploads).</td></tr>
+        </table>
+
+        <h2>Common Form Elements</h2>
+        <ul>
+            <li><strong>&lt;input&gt;</strong> – Used to take user input.</li>
+            <li><strong>&lt;label&gt;</strong> – Describes the input field.</li>
+            <li><strong>&lt;textarea&gt;</strong> – Multi-line text input.</li>
+            <li><strong>&lt;select&gt;</strong> and <strong>&lt;option&gt;</strong> – Dropdown list.</li>
+            <li><strong>&lt;button&gt;</strong> – For submitting or resetting the form.</li>
+        </ul>
+
+        <h2>Example of Input Fields</h2>
+        <pre>
+&lt;label for="username"&gt;Name:&lt;/label&gt;
+&lt;input type="text" id="username" name="username"&gt;
+        </pre>
+
+        <h2>Full Example: User Registration Form</h2>
+        <form action="/submit" method="post">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="fullname" placeholder="Enter your name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br><br>
+
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Write your message..."></textarea>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+
+        <h2>Key Points</h2>
+        <ul>
+            <li>Always use <code>&lt;label&gt;</code> for accessibility.</li>
+            <li>Use <code>method="post"</code> for sensitive information.</li>
+            <li><code>required</code> attribute makes input mandatory.</li>
+            <li><code>action</code> defines where form data is sent.</li>
+        </ul>
     </div>
+
 </body>
 </html>
