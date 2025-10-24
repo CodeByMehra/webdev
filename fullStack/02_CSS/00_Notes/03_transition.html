@@ -1,0 +1,64 @@
+<!-- 
+🌟 CSS TRANSITIONS
+
+A CSS transition allows you to change property values smoothly (over a given duration) instead of instantly. 
+It helps create animations like hover effects without using JavaScript.
+
+🎯 Syntax:
+selector {
+  transition: property duration timing-function delay;
+}
+
+📘 Properties:
+1️⃣ transition-property → Specifies the CSS property to apply transition to.
+2️⃣ transition-duration → Specifies how long the transition should take.
+3️⃣ transition-timing-function → Defines the speed curve (ease, linear, ease-in, ease-out, etc.).
+4️⃣ transition-delay → Defines when the transition will start.
+
+🧠 Default values:
+transition: all 0s ease 0s;
+
+💡 Example Explanation:
+Below example shows how a <div> smoothly changes its width and height when hovered.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Transition Example</title>
+  <style>
+    /* A simple box */
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: skyblue;
+      transition: width 1s, height 1s, background-color 1s; /* Smooth transition */
+    }
+
+    /* On hover, properties will smoothly change */
+    div:hover {
+      width: 200px;
+      height: 200px;
+      background-color: steelblue;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+</html>
+
+<!-- 
+✅ OUTPUT:
+A light blue square box appears on the page. 
+When you hover your mouse over it, the box smoothly enlarges and changes to a darker blue color.
+When you move the mouse away, it smoothly returns to its original size and color.
+
+✨ USES:
+- Button hover effects
+- Image zoom on hover
+- Menu item animations
+- Loading indicators, etc.
+-->
