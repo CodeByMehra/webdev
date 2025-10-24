@@ -1,0 +1,150 @@
+<!--  
+=====================================================
+📘 CSS DISPLAY PROPERTIES NOTES
+=====================================================
+
+🔹 Definition:
+The CSS `display` property defines how an element is displayed on the web page.
+It controls the layout behavior of an element — for example, whether it appears
+as a block, inline, inline-block, flex, or grid container.
+
+Every HTML element has a default display value depending on its type:
+    - <div> → block
+    - <span> → inline
+    - <li> → list-item
+
+-----------------------------------------------------
+🔹 Common Display Values:
+-----------------------------------------------------
+
+1️⃣ display: block;
+   → Starts on a new line and takes up full width.
+   → Width, height, margin, and padding can be applied.
+   → Examples: <div>, <p>, <h1>–<h6>, <section>, <header>
+
+   Example:
+       div {
+           display: block;
+       }
+
+-----------------------------------------------------
+
+2️⃣ display: inline;
+   → Does not start on a new line.
+   → Takes up only as much width as the content.
+   → Cannot set width or height.
+   → Examples: <span>, <a>, <strong>, <em>
+
+   Example:
+       span {
+           display: inline;
+       }
+
+-----------------------------------------------------
+
+3️⃣ display: inline-block;
+   → Behaves like an inline element but allows width and height.
+   → Useful for buttons, menus, and navigation bars.
+
+   Example:
+       button {
+           display: inline-block;
+           width: 100px;
+           height: 40px;
+       }
+
+-----------------------------------------------------
+
+4️⃣ display: none;
+   → Hides the element completely.
+   → It does not take up any space in the layout.
+   → Commonly used for dynamic visibility (e.g., JavaScript toggles).
+
+   Example:
+       .hidden {
+           display: none;
+       }
+
+-----------------------------------------------------
+
+5️⃣ display: flex;
+   → Enables Flexbox layout.
+   → Allows easy alignment and spacing of child elements.
+   → Can arrange items in rows or columns.
+
+   Example:
+       .container {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+       }
+
+-----------------------------------------------------
+
+6️⃣ display: grid;
+   → Enables CSS Grid Layout.
+   → Allows defining rows and columns for complex page layouts.
+
+   Example:
+       .wrapper {
+           display: grid;
+           grid-template-columns: 1fr 1fr 1fr;
+           gap: 10px;
+       }
+
+-----------------------------------------------------
+
+7️⃣ display: inline-flex;
+   → Similar to flex, but behaves like an inline element.
+   → Does not start on a new line.
+
+-----------------------------------------------------
+
+8️⃣ display: table;
+   → Makes the element behave like a table.
+   → Used for creating table-like layouts without actual <table> tags.
+
+-----------------------------------------------------
+
+9️⃣ display: list-item;
+   → Makes the element behave like a list item (<li>).
+
+-----------------------------------------------------
+🔹 Example Code:
+-----------------------------------------------------
+
+    <div style="display: block; background: lightblue;">Block Element</div>
+    <span style="display: inline; background: pink;">Inline Element</span>
+    <div style="display: inline-block; background: lightgreen; width:100px;">Inline-Block</div>
+
+-----------------------------------------------------
+🔹 Visibility vs Display:
+-----------------------------------------------------
+- display: none → Element is removed completely from the layout flow.
+- visibility: hidden → Element remains in layout but becomes invisible.
+
+-----------------------------------------------------
+🔹 Default Display Types of Common HTML Tags:
+-----------------------------------------------------
+
+    <div> → block
+    <p> → block
+    <h1>–<h6> → block
+    <span> → inline
+    <a> → inline
+    <img> → inline-block
+    <li> → list-item
+    <table> → table
+
+-----------------------------------------------------
+🔹 Summary:
+-----------------------------------------------------
+✅ The `display` property controls how elements are rendered on a web page.
+✅ Common values: block, inline, inline-block, none, flex, grid.
+✅ It’s a key property for managing layouts and structure.
+✅ Use Flexbox or Grid for modern responsive design layouts.
+
+=====================================================
+END OF NOTES
+=====================================================
+-->
