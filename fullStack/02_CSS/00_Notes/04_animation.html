@@ -1,0 +1,148 @@
+<!-- 
+🎬 CSS ANIMATION NOTES
+
+====================================
+1️⃣ WHAT IS ANIMATION
+------------------------------------
+Animation in CSS allows elements to change styles gradually (move, resize, fade, rotate, etc.) over time.
+It makes web pages interactive and visually appealing.
+
+✅ Key Difference from Transitions:
+- Transitions need a trigger (like hover)
+- Animations can start automatically or loop continuously
+
+Syntax:
+selector {
+  animation-name: example;
+  animation-duration: 2s;
+}
+
+====================================
+2️⃣ @KEYFRAMES RULES
+------------------------------------
+@keyframes define how the animation should progress through time.
+
+Syntax:
+@keyframes example {
+  from { background-color: red; }
+  to { background-color: yellow; }
+}
+
+OR (multiple steps)
+@keyframes example {
+  0%   { background-color: red; }
+  50%  { background-color: blue; }
+  100% { background-color: yellow; }
+}
+
+Then apply:
+div {
+  animation-name: example;
+  animation-duration: 3s;
+}
+
+====================================
+3️⃣ DELAYING AN ANIMATION
+------------------------------------
+Use `animation-delay` to specify when the animation should start.
+
+Example:
+div {
+  animation-delay: 2s;
+}
+
+⏳ The animation will start 2 seconds after the page loads or trigger occurs.
+
+====================================
+4️⃣ SETTING HOW MANY TIMES AN ANIMATION CAN RUN
+------------------------------------
+Use `animation-iteration-count`.
+
+Example:
+div {
+  animation-iteration-count: infinite;  /* Runs forever */
+  /* or use numbers like 3, 5 etc. */
+}
+
+====================================
+5️⃣ RUN ANIMATION IN REVERSE OR ALTERNATE CYCLES
+------------------------------------
+Use `animation-direction` to control the direction of the animation.
+
+Values:
+- normal → runs forward (default)
+- reverse → runs backward
+- alternate → runs forward then backward
+- alternate-reverse → starts backward then forward
+
+Example:
+div {
+  animation-direction: alternate;
+}
+
+====================================
+6️⃣ SPECIFY THE SPEED CURVE OF THE ANIMATION
+------------------------------------
+Use `animation-timing-function` to control how the speed of the animation changes.
+
+Common values:
+- ease (default)
+- linear
+- ease-in
+- ease-out
+- ease-in-out
+
+Example:
+div {
+  animation-timing-function: ease-in-out;
+}
+
+====================================
+7️⃣ SPECIFY THE FILL-MODE FOR AN ANIMATION
+------------------------------------
+The `animation-fill-mode` defines the style the element should have before and after the animation.
+
+Values:
+- none → default (no styles applied outside animation)
+- forwards → keeps the final state after animation ends
+- backwards → applies starting styles before animation starts
+- both → applies both before and after
+
+Example:
+div {
+  animation-fill-mode: forwards;
+}
+
+====================================
+8️⃣ ANIMATION SHORTHAND PROPERTY
+------------------------------------
+All animation properties can be written in one shorthand line.
+
+Syntax:
+animation: name duration timing-function delay iteration-count direction fill-mode;
+
+Example:
+div {
+  animation: moveBox 3s ease-in-out 1s infinite alternate forwards;
+}
+
+@keyframes moveBox {
+  from { transform: translateX(0); }
+  to { transform: translateX(200px); }
+}
+
+====================================
+✨ SUMMARY:
+------------------------------------
+Main properties:
+- animation-name
+- animation-duration
+- animation-timing-function
+- animation-delay
+- animation-iteration-count
+- animation-direction
+- animation-fill-mode
+- animation (shorthand)
+
+🎯 CSS animations make web elements lively and interactive.
+-->
