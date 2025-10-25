@@ -1,0 +1,155 @@
+<!-- 
+🎯 CSS MEDIA QUERIES NOTES
+
+====================================
+1️⃣ WHAT ARE MEDIA QUERIES
+------------------------------------
+Media Queries in CSS are used to make web pages responsive — i.e., they adjust layout and style according to the device’s screen size, resolution, or orientation.
+
+They help websites look good on all devices: desktops, tablets, and mobiles.
+
+📘 Syntax:
+@media media-type and (condition) {
+  /* CSS rules here */
+}
+
+Example:
+@media screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+====================================
+2️⃣ MEDIA TYPES
+------------------------------------
+Common media types:
+- screen → For computer screens, tablets, smartphones, etc.
+- print → For printed documents or print preview mode.
+- all → For all devices (default).
+
+Example:
+@media print {
+  body {
+    font-size: 12pt;
+  }
+}
+
+====================================
+3️⃣ COMMON FEATURES/CONDITIONS
+------------------------------------
+Media queries use conditions (features) to target specific device characteristics:
+
+📏 Common Features:
+- width / height → viewport width and height
+- min-width / max-width → responsive breakpoints
+- orientation → portrait or landscape
+- resolution → screen pixel density
+
+Example:
+@media (orientation: landscape) {
+  body {
+    background-color: lightgreen;
+  }
+}
+
+====================================
+4️⃣ MIN-WIDTH AND MAX-WIDTH EXAMPLES
+------------------------------------
+✅ min-width: applies styles when screen width is **greater than or equal to** specified value.
+✅ max-width: applies styles when screen width is **less than or equal to** specified value.
+
+Example:
+@media (min-width: 768px) {
+  p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  p {
+    font-size: 14px;
+  }
+}
+
+====================================
+5️⃣ COMBINING CONDITIONS
+------------------------------------
+You can combine multiple conditions using logical operators:
+
+- and → both conditions must be true
+- not → exclude certain conditions
+- only → apply styles only to specific media type
+- , (comma) → acts as OR operator
+
+Example:
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  div {
+    background-color: orange;
+  }
+}
+
+====================================
+6️⃣ PRACTICAL EXAMPLE — RESPONSIVE BOX
+------------------------------------
+In this example, the box changes color and size based on screen width.
+
+<style>
+  div {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+  }
+
+  /* For tablets */
+  @media (max-width: 768px) {
+    div {
+      background-color: blue;
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  /* For mobiles */
+  @media (max-width: 480px) {
+    div {
+      background-color: green;
+      width: 100px;
+      height: 100px;
+    }
+  }
+</style>
+
+<body>
+  <div></div>
+</body>
+
+✅ OUTPUT:
+- On large screens: red box (200x200)
+- On tablets: blue box (150x150)
+- On mobiles: green box (100x100)
+
+====================================
+7️⃣ WHY MEDIA QUERIES ARE IMPORTANT
+------------------------------------
+✔ Make websites responsive
+✔ Improve user experience
+✔ Adjust layouts automatically
+✔ Optimize performance for each device
+
+====================================
+✨ SUMMARY
+------------------------------------
+🧩 Common Media Query Keywords:
+- @media
+- screen / print / all
+- min-width / max-width
+- orientation
+
+💡 Shorthand Example:
+@media (max-width: 600px) {
+  /* CSS code */
+}
+
+Media queries = foundation of responsive web design.
+-->
