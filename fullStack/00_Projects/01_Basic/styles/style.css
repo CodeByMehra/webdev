@@ -68,11 +68,27 @@ nav ul li:hover{
 }
 
 .leftDiv{
-     font-size: 40px;
+     font-size: 20px;
      margin-bottom: 20px;
      font-weight: 700;
 }
 
-.leftDiv{
-     font-size: 2.5 rem;
+.rightDiv{
+     display: flex;
+     flex-direction: column;
+     width: 40%;
+     align-items: center;
+     justify-content: center;
+}
+
+footer{
+     display: flex;
+     align-items: center;
+     padding: 20px 0;
+     justify-content: space-around;
+}
+
+footer ul{
+     display: flex;
+     gap: 30px;
 }
