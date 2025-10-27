@@ -45,7 +45,7 @@ nav{
      justify-content: space-between;
 }
 
-nav.logo{
+.logo{
      font-weight: 700;
      font-size: 30px;
 }
@@ -61,4 +61,18 @@ nav ul li:hover{
      text-decoration: underline;
      font-weight: 900;
 }
+ 
+.heroSection{
+     display: flex;
+     align-items: center;
+}
 
+.leftDiv{
+     font-size: 40px;
+     margin-bottom: 20px;
+     font-weight: 700;
+}
+
+.leftDiv{
+     font-size: 2.5 rem;
+}
