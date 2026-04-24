@@ -6,5 +6,5 @@ figlet("Hey Mehra", function (err, data) {
     console.dir(err);
     return;
   }
-  console.log(data);
+  console.log(data); 
 });
