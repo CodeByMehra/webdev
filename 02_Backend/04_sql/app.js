@@ -31,6 +31,7 @@ app.post("/create", async function(req, res, next){
     res.send(createduser);
 });
 
+
 app.get("/update",async function(req,res,next){
     let user = await userModel.findOneAndUpdate({name: "vishal"}, {name: "Vishal Mehra"}, {new:true})
     res.send(user);
