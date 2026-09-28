@@ -5,7 +5,6 @@ for(let i=0; i<n; i++){
     console.log(`Heyy ${i}`);
 }
 
-
 /* 
 ===========================================
 📌 Node.js Quick Notes (VS Code Friendly)
