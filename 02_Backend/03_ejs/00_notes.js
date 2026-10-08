@@ -2,6 +2,7 @@
 
 //2. form ke paas action hai ya nahi
 
+
 //3.backend ke paas route hai ya nahi
 
 //4. wo route ka type sahi hai ya nahi
