@@ -1,6 +1,7 @@
 const express = require("express"); // Import the Express framework
 const app = express(); // Create an Express application object
 
+
 console.dir(app); // Print the app object details to the console (for debugging/inspection)
 
 let port = 3000; // Define the port number where the server will run
