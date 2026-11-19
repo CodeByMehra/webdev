@@ -5,7 +5,7 @@ Array.isArray(arr); // Returns true if 'arr' is an array
 let fruits = ['apple', 'banana'];
 console.log(Array.isArray(fruits)); // true
 
-//-----------------------------------------------------
+//----------------------------------------------------
 
 // 2. 📏 Length of an array
 arr.length // Tells you how many items are in the array
